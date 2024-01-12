@@ -1,6 +1,0 @@
-Flask
-numpy
-pandas
-flask-cors
-joblib
-tflite-runtime
