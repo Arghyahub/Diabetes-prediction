@@ -3,4 +3,4 @@ numpy
 pandas
 flask-cors
 joblib
-tensorflow-cpu --no-deps
+tflite-runtime

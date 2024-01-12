@@ -1,7 +1,7 @@
 from flask import Flask , request , jsonify
 from flask_cors import CORS
 
-from controller.ann import Predict
+from controller.ann import model
 
 app = Flask(__name__)
 CORS(app)
@@ -27,7 +27,7 @@ def predict():
     DiabetesPedigreeFunction = float(data['DiabetesPedigreeFunction']) 
     Age = float(data['Age'])
 
-    st = Predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
+    st = model.predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
 
     return jsonify({'msg': st})
     
